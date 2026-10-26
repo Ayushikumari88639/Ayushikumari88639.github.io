@@ -36,8 +36,8 @@ export const skillGroups: SkillGroup[] = [
       { name: 'Flask-SQLAlchemy' },
       { name: 'Role-based access control' },
       { name: 'Java backend' },
-      { name: 'Node.js', studied: true },
-      { name: 'Express.js', studied: true },
+      { name: 'Node.js' },
+      { name: 'Express.js' },
       { name: 'JWT / OAuth', studied: true },
     ],
   },
@@ -47,6 +47,7 @@ export const skillGroups: SkillGroup[] = [
     summary: 'Designing schemas before writing queries.',
     skills: [
       { name: 'MySQL' },
+      { name: 'NeDB' },
       { name: 'JDBC' },
       { name: 'Schema design' },
       { name: 'ER modelling' },

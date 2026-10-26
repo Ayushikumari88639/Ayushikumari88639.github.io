@@ -27,7 +27,8 @@ export function About() {
               What I enjoy most is building complete applications rather than isolated pages. In VeriSync I designed a
               14-table MySQL schema, built session-based login and role-based access in Flask, and connected an
               OpenCV face-matching pipeline to a three-step verification flow that never stores students’ photos. In SmartCV I followed one piece of data from an HTML form through
-              Flask validation into MySQL and back out as a rendered resume.
+              Flask validation into MySQL and back out as a rendered resume, and in STRIDE I built a Node.js and
+              Express store with sessions, a persistent cart and order history.
             </p>
             <p>
               Three technical internships — Java, Android and web development — taught me the less glamorous parts of the
