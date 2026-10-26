@@ -24,9 +24,9 @@ export function About() {
               algorithms, software engineering, API development — gives me the theory behind the things I build.
             </p>
             <p>
-              What I enjoy most is building complete applications rather than isolated pages. In VeriSync I designed the
-              MySQL schema, wrote JWT-based login and role-based access in Flask, and connected an OpenCV face-matching
-              pipeline to a three-step verification flow. In SmartCV I followed one piece of data from an HTML form through
+              What I enjoy most is building complete applications rather than isolated pages. In VeriSync I designed a
+              14-table MySQL schema, built session-based login and role-based access in Flask, and connected an
+              OpenCV face-matching pipeline to a three-step verification flow that never stores students’ photos. In SmartCV I followed one piece of data from an HTML form through
               Flask validation into MySQL and back out as a rendered resume.
             </p>
             <p>
