@@ -74,13 +74,4 @@ export const achievements: Achievement[] = [
     details: ['Exposure to WebXR, A-Frame, Meta Quest and Stanford Design Thinking', 'Team pitch: LifeBridge'],
     certificateId: 'yisl',
   },
-  {
-    id: 'hackathon',
-    mark: 'H',
-    kind: 'Hackathon · Participant',
-    title: 'SurakshaCheck',
-    organiser: 'Hackathon project',
-    date: '',
-    details: ['Built a scam/fraud verification tool (website + WhatsApp chatbot) for elderly citizens'],
-  },
 ];

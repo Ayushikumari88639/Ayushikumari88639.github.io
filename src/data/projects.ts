@@ -221,45 +221,6 @@ export const projects: Project[] = [
     motif: 'verify',
   },
   {
-    id: 2,
-    slug: 'surakshacheck',
-    name: 'SurakshaCheck',
-    title: 'SurakshaCheck — Scam and Fraud Verification Tool',
-    tagline: 'A simple place for elderly people to check a suspicious call, message or link.',
-    description:
-      'A hackathon project that helps people — especially elderly citizens — check suspicious calls, messages and links through a website and a WhatsApp chatbot.',
-    categories: ['web', 'security'],
-    technologies: ['Website', 'WhatsApp chatbot'],
-    features: [
-      'Website interface for checking suspicious calls, messages and links',
-      'WhatsApp chatbot so users can check from an app they already use',
-      'Designed with elderly citizens in mind',
-    ],
-    status: 'Hackathon prototype',
-    context: 'Built as a hackathon participant.',
-    problem:
-      'Scam calls, fake messages and phishing links often target elderly people, who may not know how to judge whether something is genuine — or whom to ask.',
-    objective:
-      'Give people a familiar, low-effort way to check something suspicious before acting on it, with practical cybersecurity awareness built into the experience.',
-    flow: {
-      title: 'How someone uses it',
-      steps: [
-        { label: 'Receive something suspicious', detail: 'A call, message or link' },
-        { label: 'Check it', detail: 'On the website or through WhatsApp' },
-        { label: 'Get guidance', detail: 'Before replying, clicking or paying' },
-      ],
-    },
-    sections: [
-      {
-        heading: 'Why WhatsApp',
-        body: 'Many elderly users already use WhatsApp every day. Meeting them inside a familiar app removes the need to learn a new tool at the exact moment they are unsure what to trust.',
-      },
-    ],
-    featured: true,
-    ctaLabel: 'Explore SurakshaCheck',
-    motif: 'shield',
-  },
-  {
     id: 3,
     slug: 'smartcv',
     name: 'SmartCV',
@@ -350,6 +311,8 @@ export const projects: Project[] = [
     ],
     thumbnail: githubPreview('Ecommerce_Website'),
     githubUrl: `${GH}/Ecommerce_Website`,
+    featured: true,
+    ctaLabel: 'Explore STRIDE',
     motif: 'cart',
   },
   {

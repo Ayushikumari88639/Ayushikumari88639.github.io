@@ -1402,6 +1402,12 @@
   }
 }
 
+@media (min-width: 1000px) {
+  .recog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .recog__item {
   display: grid;
   grid-template-columns: 44px 1fr;
