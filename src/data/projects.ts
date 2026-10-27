@@ -106,6 +106,9 @@ export const categoryLabels: Record<ProjectCategory, string> = {
 
 const GH = 'https://github.com/Ayushikumari88639';
 
+/** GitHub's auto-generated social card for a repository (name, description, language). */
+export const githubPreview = (repo: string) => `https://opengraph.githubassets.com/1/Ayushikumari88639/${repo}`;
+
 export const projects: Project[] = [
   {
     id: 1,
@@ -345,6 +348,7 @@ export const projects: Project[] = [
         ],
       },
     ],
+    thumbnail: githubPreview('Ecommerce_Website'),
     githubUrl: `${GH}/Ecommerce_Website`,
     motif: 'cart',
   },

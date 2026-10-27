@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { Motif, Project } from '../data/projects';
 import { asset } from '../lib/site';
 
@@ -179,10 +180,19 @@ function Art({ motif }: { motif: Motif }) {
 }
 
 export function ProjectVisual({ project, size = 'md', showLabel = true }: { project: Project; size?: 'sm' | 'md' | 'lg'; showLabel?: boolean }) {
-  if (project.thumbnail) {
+  const [failed, setFailed] = useState(false);
+  if (project.thumbnail && !failed) {
+    const isGitHubCard = project.thumbnail.includes('opengraph.githubassets.com');
     return (
-      <div className={`plate plate--${size}`}>
-        <img src={asset(project.thumbnail)} alt={`${project.name} screenshot`} loading="lazy" decoding="async" />
+      <div className={`plate plate--${size} ${isGitHubCard ? 'plate--gh' : ''}`}>
+        <img
+          src={asset(project.thumbnail)}
+          alt={isGitHubCard ? `GitHub repository card for ${project.name}` : `${project.name} screenshot`}
+          loading="lazy"
+          decoding="async"
+          onError={() => setFailed(true)}
+        />
+        {isGitHubCard && showLabel && <span className="plate__label">GitHub repository preview</span>}
       </div>
     );
   }

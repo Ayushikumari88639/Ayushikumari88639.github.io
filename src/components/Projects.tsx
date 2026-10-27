@@ -75,9 +75,17 @@ function ProjectCard({ project }: { project: Project }) {
             <li key={t}>{t}</li>
           ))}
         </ul>
-        <span className="card__more" aria-hidden="true">
-          View details <Icon name="arrowRight" size={14} />
-        </span>
+        <div className="card__foot">
+          <span className="card__more" aria-hidden="true">
+            View details <Icon name="arrowRight" size={14} />
+          </span>
+          {project.githubUrl && (
+            <a className="card__gh" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+              <Icon name="github" size={15} /> GitHub
+              <span className="visually-hidden"> repository for {project.name} (opens in a new tab)</span>
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

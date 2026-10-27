@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 
 /** Resolve a file in /public against the deployed base path. */
-export const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+export const asset = (path: string) =>
+  /^https?:\/\//.test(path) ? path : `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
 // ── Routing ────────────────────────────────────────────────────────────────
 // Project pages live at ?project=<slug>. Query strings work on every static
