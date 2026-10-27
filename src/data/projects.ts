@@ -106,9 +106,6 @@ export const categoryLabels: Record<ProjectCategory, string> = {
 
 const GH = 'https://github.com/Ayushikumari88639';
 
-/** GitHub's auto-generated social card for a repository (name, description, language). */
-export const githubPreview = (repo: string) => `https://opengraph.githubassets.com/1/Ayushikumari88639/${repo}`;
-
 export const projects: Project[] = [
   {
     id: 1,
@@ -204,17 +201,6 @@ export const projects: Project[] = [
         solution: 'A PowerShell setup script creates the environment and .env file, and a check_setup.py script reports anything still misconfigured.',
       },
     ],
-    thumbnail: 'projects/verisync/landing.webp',
-    screenshots: [
-      { src: 'projects/verisync/landing.webp', alt: 'VeriSync landing page with the headline One Face, One Identity, Zero Proxy', caption: 'Landing page' },
-      { src: 'projects/verisync/login.webp', alt: 'Login page with student, faculty and admin role tabs beside the three verification layers', caption: 'Role-based sign-in' },
-      { src: 'projects/verisync/mark-attendance.webp', alt: 'Verification centre showing face recognition, QR verification and OTP authentication panels', caption: 'Student verification centre: face, QR and OTP' },
-      { src: 'projects/verisync/faculty-dashboard.webp', alt: 'Faculty dashboard for starting an attendance session and generating a QR code', caption: 'Faculty: start a session and generate a QR code' },
-      { src: 'projects/verisync/student-dashboard.webp', alt: 'Student overview with attendance stats, analytics chart and today’s status', caption: 'Student dashboard' },
-      { src: 'projects/verisync/faculty-reports.webp', alt: 'Attendance analytics page with class and date filters and CSV and PDF export', caption: 'Faculty attendance analytics and export' },
-      { src: 'projects/verisync/admin-users.webp', alt: 'Admin user management page with student counts, faculty management and low-attendance alerts', caption: 'Admin user management' },
-    ],
-    screenshotNote: 'Rendered from the project’s own templates and stylesheet using the demo accounts in seed.sql — no real student data.',
     githubUrl: undefined, // Add the VeriSync repository URL when it is public.
     featured: true,
     ctaLabel: 'Explore VeriSync',
@@ -309,7 +295,6 @@ export const projects: Project[] = [
         ],
       },
     ],
-    thumbnail: githubPreview('Ecommerce_Website'),
     githubUrl: `${GH}/Ecommerce_Website`,
     featured: true,
     ctaLabel: 'Explore STRIDE',

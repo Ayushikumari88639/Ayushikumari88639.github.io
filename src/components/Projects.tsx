@@ -81,8 +81,8 @@ function ProjectCard({ project }: { project: Project }) {
           </span>
           {project.githubUrl && (
             <a className="card__gh" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Icon name="github" size={15} /> GitHub
-              <span className="visually-hidden"> repository for {project.name} (opens in a new tab)</span>
+              <Icon name="github" size={15} /> View Code
+              <span className="visually-hidden"> for {project.name} on GitHub (opens in a new tab)</span>
             </a>
           )}
         </div>
@@ -98,11 +98,11 @@ function CompactRow({ project }: { project: Project }) {
       <span className="compact__tech">{project.technologies.join(' · ')}</span>
       {project.githubUrl ? (
         <a className="compact__link" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-          Repository <Icon name="arrowUpRight" size={14} />
-          <span className="visually-hidden"> for {project.name} (opens in a new tab)</span>
+          View Code <Icon name="arrowUpRight" size={14} />
+          <span className="visually-hidden"> for {project.name} on GitHub (opens in a new tab)</span>
         </a>
       ) : (
-        <span className="compact__pending">Repository coming soon</span>
+        <span className="compact__pending">Code coming soon</span>
       )}
     </li>
   );
@@ -133,7 +133,7 @@ export function Projects() {
               Things I have <em>built</em>, and how they work.
             </>
           }
-          intro="Each project has its own page with the problem, the features, the stack and how the pieces connect. Illustrations stand in where screenshots have not been added yet."
+          intro="Each project has its own page with the problem, the features, the stack and how the pieces connect. Where the code is public, View Code opens it on GitHub."
         />
 
         <div className="features">

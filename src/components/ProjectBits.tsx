@@ -28,13 +28,13 @@ export function ProjectLinks({ project, compact = false }: { project: Project; c
     <div className={`project-links ${compact ? 'project-links--compact' : ''}`}>
       {project.githubUrl ? (
         <a className="btn btn--outline" href={project.githubUrl} {...ext}>
-          <Icon name="github" size={16} /> Repository
-          <span className="visually-hidden"> (opens in a new tab)</span>
+          <Icon name="github" size={16} /> View Code
+          <span className="visually-hidden"> on GitHub (opens in a new tab)</span>
         </a>
       ) : (
         !compact && (
           <span className="pending">
-            <Icon name="clock" size={15} /> Repository coming soon
+            <Icon name="clock" size={15} /> Code coming soon on GitHub
           </span>
         )
       )}

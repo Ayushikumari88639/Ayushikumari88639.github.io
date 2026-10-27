@@ -211,8 +211,8 @@ export function ProjectPage({ slug }: { slug: string }) {
               </Block>
             )}
 
-            <Block title={`${num()} — Screenshots`} id="p-screens">
-              {project.screenshots?.length ? (
+            {project.screenshots?.length ? (
+              <Block title={`${num()} — Screenshots`} id="p-screens">
                 <>
                   <div className="shots">
                     {project.screenshots.map((s) => (
@@ -226,12 +226,8 @@ export function ProjectPage({ slug }: { slug: string }) {
                   </div>
                   {project.screenshotNote && <p className="note">{project.screenshotNote}</p>}
                 </>
-              ) : (
-                <p className="empty-note">
-                  Screenshots haven’t been added yet. The illustration above is a placeholder, not a capture of the application.
-                </p>
-              )}
-            </Block>
+              </Block>
+            ) : null}
 
             {project.videoUrl && (
               <Block title={`${num()} — Video`} id="p-video">

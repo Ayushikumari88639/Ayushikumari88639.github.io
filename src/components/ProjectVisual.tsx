@@ -201,7 +201,7 @@ export function ProjectVisual({ project, size = 'md', showLabel = true }: { proj
       <svg viewBox="0 0 320 200" role="img" aria-label={`Illustration representing ${project.name}`}>
         <Art motif={project.motif} />
       </svg>
-      {showLabel && <span className="plate__label">Illustration · screenshot to be added</span>}
+      {showLabel && <span className="plate__label">Illustration</span>}
     </div>
   );
 }
