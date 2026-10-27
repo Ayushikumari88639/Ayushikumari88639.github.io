@@ -2065,8 +2065,32 @@
   gap: 16px;
 }
 
+.shots a {
+  display: block;
+  border-radius: var(--radius);
+}
+
 .shots img {
   width: 100%;
+  height: auto;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.shots a:hover img {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 720px) {
+  .shots {
+    grid-template-columns: 1fr 1fr;
+  }
+  .shots figure:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.shots img {
   border-radius: var(--radius);
   border: 1px solid var(--line);
 }

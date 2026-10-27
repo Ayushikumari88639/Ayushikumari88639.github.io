@@ -213,14 +213,19 @@ export function ProjectPage({ slug }: { slug: string }) {
 
             <Block title={`${num()} — Screenshots`} id="p-screens">
               {project.screenshots?.length ? (
-                <div className="shots">
-                  {project.screenshots.map((s) => (
-                    <figure key={s.src}>
-                      <img src={asset(s.src)} alt={s.alt} loading="lazy" decoding="async" />
-                      {s.caption && <figcaption>{s.caption}</figcaption>}
-                    </figure>
-                  ))}
-                </div>
+                <>
+                  <div className="shots">
+                    {project.screenshots.map((s) => (
+                      <figure key={s.src}>
+                        <a href={asset(s.src)} target="_blank" rel="noopener noreferrer" aria-label={`Open full size: ${s.caption ?? s.alt}`}>
+                          <img src={asset(s.src)} alt={s.alt} loading="lazy" decoding="async" width={1440} height={900} />
+                        </a>
+                        {s.caption && <figcaption>{s.caption}</figcaption>}
+                      </figure>
+                    ))}
+                  </div>
+                  {project.screenshotNote && <p className="note">{project.screenshotNote}</p>}
+                </>
               ) : (
                 <p className="empty-note">
                   Screenshots haven’t been added yet. The illustration above is a placeholder, not a capture of the application.
